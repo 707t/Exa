@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://www.wallpapertip.com/wmimgs/28-280400_farewell-backgrounds-anime-sky-wallpaper-hd.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    position: relative;
+    font-size: 60px;
+    -webkit-text-stroke: 0.vw rgb(52, 52, 52);
+    color: black;
+    text-transform: uppercase;
+}
+h1::before {
+    content: attr(data-texts);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: gainsboro;
+    -webkit-text-strike: 0vw #383d52;
+    border-right: 2px solid blanchedalmond;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate {
+    0%,10%,100% {
+
+    }
+    70%,90% {
+        width: 100%;
+    }
+}
+
+.demo {
+    display: flex;
+    transform: scale(2);
+    color: rgb(0, 0, 0);
+}
+
+.demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
+
+.time h2 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1;
+    margin: 0 0 spx;
+}
+
+@media(max-width: 500px) {
+    h1 {
+        font-size: 45px;
+    }
+    .time {
+        margin: 5px;
+    }
+    .time h2 {
+        font-size: 12px;
+    }
+    .time small {
+        font-size: 10px;
+    }
+}
